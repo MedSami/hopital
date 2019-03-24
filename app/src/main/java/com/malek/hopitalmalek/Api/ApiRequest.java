@@ -14,7 +14,7 @@ public interface ApiRequest {
     @GET("Login.php")
     Call<ResponseDataModel> Login(@Query("cin") String cin);
 
-    /*************** Inscrire apatient *******************/
+    /*************** Inscrire patient *******************/
     @FormUrlEncoded
     @POST("Inscrire.php")
     Call<ResponseDataModel> Inscrire(
@@ -22,6 +22,23 @@ public interface ApiRequest {
             @Field("prenom") String prenom,
             @Field("cin") String cin,
             @Field("password") String password
+    );
+
+    /******************** All medecins*******************/
+    @GET("AllMedecins.php")
+    Call<ResponseDataModel> getMedecins();
+  /******************** All Specialite*******************/
+    @GET("AllSpecialite.php")
+    Call<ResponseDataModel> getSpecialite();
+
+    /*************** Rendez vous *******************/
+    @FormUrlEncoded
+    @POST("AffecterRendezVous.php")
+    Call<ResponseDataModel> RendezVous(
+            @Field("id_patient") String id_patient,
+            @Field("id_medecin") String id_medecin,
+            @Field("choix") String choix,
+            @Field("date") String date
     );
 
 }

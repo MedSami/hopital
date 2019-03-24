@@ -52,17 +52,21 @@ Button btnInscrire,btnEntrer;
                     public void onResponse(Call<ResponseDataModel> call, Response<ResponseDataModel> response) {
 
                             if(response.isSuccessful()){
+                                if(!response.body().getResult().isEmpty()){
                                 if(response.body().getResult().get(0).getCin().equals(edtCin.getText().toString())){
                                     if(response.body().getResult().get(0).getMotDePasse().equals(edtMotDePasse.getText().toString())){
 
                                         Intent intent=new Intent(MainActivity.this,MenuPrincipale.class);
-                                        intent.putExtra("idUtilisateur",""+response.body().getResult().get(0).getId());
+                                        intent.putExtra("idPatient",""+response.body().getResult().get(0).getId());
                                         startActivity(intent);
 
                                     }else {
                                         Toast.makeText(MainActivity.this, "Mot De Passe Incorrect", Toast.LENGTH_SHORT).show();
                                     }
                                 }else {
+                                    Toast.makeText(MainActivity.this, "CIN Incorrect", Toast.LENGTH_SHORT).show();
+
+                                }}else {
                                     Toast.makeText(MainActivity.this, "CIN Incorrect", Toast.LENGTH_SHORT).show();
 
                                 }
