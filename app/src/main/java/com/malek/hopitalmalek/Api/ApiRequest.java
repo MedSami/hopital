@@ -30,6 +30,9 @@ public interface ApiRequest {
   /******************** All Specialite*******************/
     @GET("AllSpecialite.php")
     Call<ResponseDataModel> getSpecialite();
+    /******************** Authentification Login*******************/
+    @GET("AllRendezVous.php")
+    Call<ResponseDataModel> getRendezVous(@Query("idPatient") String idPatient);
 
     /*************** Rendez vous *******************/
     @FormUrlEncoded

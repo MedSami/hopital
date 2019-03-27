@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AffecterRDV">
+    tools:context=".AffecterRDV"
+    android:background="@drawable/gradient_background">
 
     <TextView
         android:id="@+id/textView"
@@ -19,6 +20,7 @@
         android:text="DATE RENDEZ VOUS"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/edtdate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +38,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="JJ/MM/AAAA"
-        android:inputType="time"
+        android:inputType="date"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +51,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Rendez Vous"
+        android:background="@drawable/gradient_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/edtdate"
         app:layout_constraintStart_toStartOf="@+id/edtdate"

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DemandeRendezVous">
+    tools:context=".DemandeRendezVous"
+    android:background="@drawable/gradient_background">
 
     <Button
         android:id="@+id/btnSpecialite"
@@ -17,6 +18,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:text="Chercher Par Specialite"
+        android:background="@drawable/gradient_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +34,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="28dp"
         android:text="Chercher Par Nom"
+        android:background="@drawable/gradient_btn"
         app:layout_constraintBottom_toTopOf="@+id/btnSpecialite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

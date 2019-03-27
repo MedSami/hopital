@@ -24,7 +24,14 @@ String idPatient;
 
 
         }
-
+btnConsulterMsg.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MenuPrincipale.this,ListRDV.class);
+        intent.putExtra("idPatient",idPatient);
+        startActivity(intent);
+    }
+});
 btnDemandeRendezVous.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
